@@ -15,6 +15,7 @@ ex01 = executable(
   install : true,
   dependencies : dependencies,
 )
+test('ex01', ex01)
 
 ex02 = executable(
   'ex02',
@@ -22,6 +23,12 @@ ex02 = executable(
   install : true,
   dependencies : dependencies,
 )
-
-test('ex01', ex01)
 test('ex02', ex02)
+
+ex03 = executable(
+  'ex03',
+  'ex03/main.cpp',
+  install : true,
+  dependencies : dependencies,
+)
+test('ex03', ex03)
