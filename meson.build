@@ -32,3 +32,11 @@ ex03 = executable(
   dependencies : dependencies,
 )
 test('ex03', ex03)
+
+ex04 = executable(
+  'ex04',
+  'ex04/main.cpp',
+  install : true,
+  dependencies : dependencies,
+)
+test('ex04', ex04)
