@@ -47,3 +47,11 @@ ex05 = executable(
   dependencies: dependencies,
 )
 test('ex05', ex05)
+
+ch01 = executable(
+  'ch01',
+  'ch01/main.cpp',
+  install: true,
+  dependencies: dependencies,
+)
+test('ch01', ch01)
