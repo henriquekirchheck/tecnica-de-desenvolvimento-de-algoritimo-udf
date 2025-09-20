@@ -8,50 +8,40 @@ project(
 
 dependencies = []
 
-ex01 = executable(
-  'ex01',
-  'ex01/main.cpp',
-  install: true,
-  dependencies: dependencies,
-)
-test('ex01', ex01)
+foreach i : range(1,6)
+  exe = executable(
+    'list0_ex@0@'.format(i.to_string(fill: 2)),
+    'list0/ex@0@/main.cpp'.format(i.to_string(fill: 2)),
+    install: true,
+    dependencies: dependencies,
+  )
+  test('list0_ex@0@'.format(i.to_string(fill: 2)), exe)
+endforeach
 
-ex02 = executable(
-  'ex02',
-  'ex02/main.cpp',
+list0_ch01 = executable(
+  'list0_ch01',
+  'list0/ch01/main.cpp',
   install: true,
   dependencies: dependencies,
 )
-test('ex02', ex02)
+test('list0_ch01', list0_ch01)
 
-ex03 = executable(
-  'ex03',
-  'ex03/main.cpp',
-  install: true,
-  dependencies: dependencies,
-)
-test('ex03', ex03)
+foreach i : range(1,17)
+  exe = executable(
+    'list1_ex@0@'.format(i.to_string(fill: 2)),
+    'list1/ex@0@/main.cpp'.format(i.to_string(fill: 2)),
+    install: true,
+    dependencies: dependencies,
+  )
+  test('list1_ex@0@'.format(i.to_string(fill: 2)), exe)
+endforeach
 
-ex04 = executable(
-  'ex04',
-  'ex04/main.cpp',
-  install: true,
-  dependencies: dependencies,
-)
-test('ex04', ex04)
-
-ex05 = executable(
-  'ex05',
-  'ex05/main.cpp',
-  install: true,
-  dependencies: dependencies,
-)
-test('ex05', ex05)
-
-ch01 = executable(
-  'ch01',
-  'ch01/main.cpp',
-  install: true,
-  dependencies: dependencies,
-)
-test('ch01', ch01)
+foreach i : range(1,15)
+  exe = executable(
+    'list2_ex@0@'.format(i.to_string(fill: 2)),
+    'list2/ex@0@/main.cpp'.format(i.to_string(fill: 2)),
+    install: true,
+    dependencies: dependencies,
+  )
+  test('list2_ex@0@'.format(i.to_string(fill: 2)), exe)
+endforeach
