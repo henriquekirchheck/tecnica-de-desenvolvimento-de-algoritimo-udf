@@ -45,3 +45,13 @@ foreach i : range(1,15)
   )
   test('list2_ex@0@'.format(i.to_string(fill: 2)), exe)
 endforeach
+
+foreach i : range(1,17)
+  exe = executable(
+    'list3_ex@0@'.format(i.to_string(fill: 2)),
+    'list3/ex@0@/main.cpp'.format(i.to_string(fill: 2)),
+    install: true,
+    dependencies: dependencies,
+  )
+  test('list3_ex@0@'.format(i.to_string(fill: 2)), exe)
+endforeach
